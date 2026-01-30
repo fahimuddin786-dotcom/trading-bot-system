@@ -1,0 +1,9 @@
+{
+  "symbol": "BTCUSDT",
+  "signal": "BUY",
+  "entry": "45000",
+  "sl": "44000",
+  "tp1": "46000",
+  "confidence": 85,
+  "riskPercent": 1.5
+}

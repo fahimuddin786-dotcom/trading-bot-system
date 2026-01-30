@@ -1,0 +1,47 @@
+{
+  "name": "trading-bot-system",
+  "version": "4.2.0",
+  "description": "Complete trading bot with frontend and backend - UNIVERSAL VERSION (Local + Render)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "PORT=3000 nodemon server.js",
+    "start:local": "PORT=8080 node server.js",
+    "start:render": "PORT=8080 node server.js",
+    "start:frontend": "cd ../frontend && npm start",
+    "start:all": "concurrently \"npm run start\" \"npm run start:frontend\"",
+    "install:all": "npm install && npm install --prefix ../frontend",
+    "build": "npm run build --prefix ../frontend",
+    "deploy": "npm run install:all && npm run build && npm start",
+    "render:deploy": "npm run install:all && npm run build && npm start",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "trading-bot",
+    "crypto",
+    "telegram-bot",
+    "binance",
+    "tradingview",
+    "render",
+    "universal",
+    "auto-ping"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.16.0",
+    "axios": "^1.6.0",
+    "web-push": "^3.6.5",
+    "winston": "^3.11.0",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
